@@ -15,33 +15,33 @@ const packweb = (state = webpackOptions.initConfig, action) => {
 export default packweb
 
 const removeOption = (state, action) => {
-  let deleteIndex = getIndexOfItemInArray(state.activeOptions, action.optionName)
-  let activeOptions = [
-    ...state.activeOptions.slice(0, deleteIndex),
-    ...state.activeOptions.slice(deleteIndex + 1)
-  ]
-  let packages = state.packages.filter( p =>
-    removeOptionPackages(p, webpackOptions[action.optionName].packages)
-  )
+  let option = webpackOptions[action.optionName]
+
+  let activeOptions = removeItemFromArray(state.activeOptions, action.optionName)
+
+  let packages = removeOptionPackages(state.packages, option.packages)
+
   // TODO: remove optionName from webpackConfig
+
   return {
     activeOptions,
     packages
   }
 }
 
-const removeOptionPackages = (p, packagesToRemove) => {
-  if (packagesToRemove.includes(p)) return false
-  else return true
+const removeOptionPackages = (optionPackages, packagesToRemove) => {
+  return optionPackages.filter( p => {
+    if (packagesToRemove.includes(p)) return false
+    else return true
+  })
 }
 
-const getIndexOfItemInArray = (theArray, theItem) => {
-  let Index
-  theArray.map((o, index) => {
-    if (o === theItem)
-      Index = index
-  })
-  return Index
+const removeItemFromArray = (theArray, theItem) => {
+  let deleteIndex = theArray.indexOf(theItem)
+  return [
+    ...theArray.slice(0, deleteIndex),
+    ...theArray.slice(deleteIndex + 1)
+  ]
 }
 
 const addOption = (state, action) => {
