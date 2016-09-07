@@ -1,10 +1,21 @@
 export const initConfig = {
+  activeOptions: [],
   packages: ['webpack'],
   webpackConfig: {
     entry: 'someEntry',
     output: {
       path: 'somepath',
       filename: 'somefilename'
+    }
+  }
+}
+
+export const devServer = {
+  packages: ['webpack-dev-server'],
+  webpackConfig: {
+    devServer: {
+      inline: true,
+      hot: true
     }
   }
 }

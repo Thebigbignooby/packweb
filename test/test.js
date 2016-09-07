@@ -4,9 +4,10 @@ import * as actionTests from './actions'
 import * as reducerTests from './reducers'
 
 describe('ACTIONS', () => {
-  it('should return a correct TOGGLE_ITEM action', actionTests.toggleItemTest)
+  it('should return a correct TOGGLE_OPTION action', actionTests.toggleOptionTest)
 })
 
 describe('REDUCERS', () => {
-  it('should toggle an item', reducerTests.toggleItemTest)
+  it('should add an option', reducerTests.addOptionTest)
+  it('should remove an option', reducerTests.removeOptionTest)
 })

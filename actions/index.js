@@ -1,4 +1,9 @@
-export const toggleItem = (itemId) => ({
-  type: 'TOGGLE_ITEM',
-  itemId
+export const editString = (optionName) => ({
+  type: 'EDIT_STRING',
+  optionName
+})
+
+export const toggleOption = (optionName) => ({
+  type: 'TOGGLE_OPTION',
+  optionName
 })

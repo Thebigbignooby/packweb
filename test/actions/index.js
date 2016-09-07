@@ -1,15 +1,15 @@
 import expect from 'expect'
 
-const toggleItem = (itemId) => ({
-  type: 'TOGGLE_ITEM',
-  itemId: itemId
+const toggleOption = (optionName) => ({
+  type: 'TOGGLE_OPTION',
+  optionName
 })
 
-export const toggleItemTest = () => {
+export const toggleOptionTest = () => {
   expect(
-    toggleItem('es6')
+    toggleOption('es6')
   ).toEqual({
-    type: 'TOGGLE_ITEM',
-    itemId: 'es6'
+    type: 'TOGGLE_OPTION',
+    optionName: 'es6'
   })
 }
