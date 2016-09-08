@@ -1,5 +1,12 @@
 import * as webpackOptions from '../knowledge-base/webpackConfigOptions'
 
+import packagesByOption from './packagesByOption'
+export { packagesByOption }
+import configByOption from './configByOption'
+export { configByOption }
+import selectedOptions from './selectedOptions'
+export { selectedOptions }
+
 const packweb = (state = webpackOptions.initConfig, action) => {
   switch (action.type) {
     case 'TOGGLE_OPTION':

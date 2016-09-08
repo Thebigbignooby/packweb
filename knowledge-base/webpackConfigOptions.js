@@ -1,5 +1,5 @@
-const allPossibleOptions = [
-  'dev-server',
+export const allPossibleOptions = [
+  'devServer',
   'es6',
   'react',
 ]
@@ -15,6 +15,39 @@ export const initConfig = {
       filename: 'somefilename'
     }
   }
+}
+
+export const initPackagesByOption = {
+  'dev-server': ['webpack-dev-server'],
+  es6: ['babel-core', 'babel-preset-es2015', 'babel-loader'],
+  react: ['babel-core', 'babel-preset-react', 'babel-loader']
+}
+
+export const configByOption = {
+  'dev-server': {
+    devServer: {
+      inline: true,
+      hot: true
+    }
+  },
+  es6: {
+    module: {
+      loaders: [{
+        loader: 'babel',
+        test: /\.js$/,
+        exclude: /node_modules/,
+      }]
+    }
+  },
+  react: {
+    module: {
+      loaders: [{
+        loader: 'babel',
+        test: /\.js$/,
+        exclude: /node_modules/,
+      }]
+    }
+  },
 }
 
 export const devServer = {
@@ -39,3 +72,26 @@ export const es6 = {
     }
   }
 }
+
+export const react = {
+  packages: ['babel-core', 'babel-preset-react', 'babel-loader'],
+  webpackConfig: {
+    module: {
+      loaders: [{
+        loader: 'babel',
+        test: /\.js$/,
+        exclude: /node_modules/,
+      }]
+    }
+  }
+}
+
+export const configOrder = [
+  'imports',
+  'context',
+  'entry',
+  'output',
+  'module',
+  'plugins',
+  'devServer'
+]

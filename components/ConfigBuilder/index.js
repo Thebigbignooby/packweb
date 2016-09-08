@@ -1,7 +1,9 @@
 import React, { PropTypes } from 'react'
-import ConnectedOption from '../ConnectedComponents/ConnectedOption'
 
-const ConfigBuilder = ({ allPossibleOptions }) => (
+import ConnectedOption from '../ConnectedComponents/ConnectedOption'
+import { allPossibleOptions } from '../../knowledge-base/webpackConfigOptions'
+
+const ConfigBuilder = () => (
   <div>
     {allPossibleOptions.map( option =>
       <ConnectedOption

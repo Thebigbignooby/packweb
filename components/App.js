@@ -3,7 +3,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 
 import TextField from 'material-ui/TextField';
 
-import ConnectedConfigBuilder from './ConnectedComponents/ConnectedConfigBuilder'
+import ConfigBuilder from './ConfigBuilder'
 import ConnectedPackages from './ConnectedComponents/ConnectedPackages'
 import WebpackConfig from './WebpackConfig'
 
@@ -19,7 +19,7 @@ const App = () => (
       floatingLabelText="Output"
       floatingLabelFixed={true}
     />
-    <ConnectedConfigBuilder/>
+    <ConfigBuilder/>
     <ConnectedPackages/>
     <WebpackConfig/>
   </div>
