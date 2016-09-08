@@ -3,18 +3,10 @@ import { connect } from 'react-redux'
 import { toggleOption } from '../../actions'
 import Packages from '../Packages'
 
-const filterPackagesBySelectedOptions = (state) => {
-  return state.packages
-
-  let packages = []
-  state.selectedOptions.map(option => {
-    packages.push(state.packagesByOption[option])
-  })
-
-}
+import { getPackagesBySelectedOptions } from '../../reducers'
 
 const mapStateToProps = (state) => ({
-  packages: filterPackagesBySelectedOptions(state)
+  packages: getPackagesBySelectedOptions(state)
 })
 
 const ConnectedPackages = connect(

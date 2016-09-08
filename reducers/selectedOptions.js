@@ -2,11 +2,6 @@ const selectedOptions = (state = [], action) => {
   switch (action.type) {
     case 'TOGGLE_OPTION':
       let option = action.optionName
-      console.log('==============');
-      console.log(state)
-      console.log(action)
-      console.log('==============');
-
       if (state.includes(option)) {
         return removeItemFromArray(state, option)
       } else {

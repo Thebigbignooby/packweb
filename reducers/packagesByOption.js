@@ -8,3 +8,11 @@ const packagesByOption = (state = initPackagesByOption, action) => {
 }
 
 export default packagesByOption
+
+export const getPackagesBySelectedOptions = (state, selectedOptions) => {
+  let allPackages = []
+  selectedOptions.forEach(option => {
+    allPackages.push(...state[option])
+  })
+  return [ ...new Set(allPackages) ]
+}

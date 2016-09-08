@@ -6,7 +6,7 @@ export const allPossibleOptions = [
 
 export const initConfig = {
   allPossibleOptions,
-  activeOptions: [],
+  selectedOptions: [],
   packages: ['webpack'],
   webpackConfig: {
     entry: 'someEntry',
@@ -23,7 +23,7 @@ export const initPackagesByOption = {
   react: ['babel-core', 'babel-preset-react', 'babel-loader']
 }
 
-export const configByOption = {
+export const initConfigByOption = {
   'dev-server': {
     devServer: {
       inline: true,

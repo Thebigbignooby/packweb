@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware } from 'redux'
 import createLogger from 'redux-logger'
-import packweb from './reducers'
+import reducer from './reducers'
 
 const configureStore = () => {
   const middlewares = []
@@ -10,7 +10,7 @@ const configureStore = () => {
   }
 
   return createStore(
-    packweb,
+    reducer,
     applyMiddleware(...middlewares)
   )
 }
