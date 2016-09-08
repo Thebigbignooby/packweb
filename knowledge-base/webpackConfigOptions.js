@@ -1,4 +1,11 @@
+const allPossibleOptions = [
+  'dev-server',
+  'es6',
+  'react',
+]
+
 export const initConfig = {
+  allPossibleOptions,
   activeOptions: [],
   packages: ['webpack'],
   webpackConfig: {
