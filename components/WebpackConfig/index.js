@@ -5,13 +5,9 @@ import Highlight from 'react-highlight.js'
 
 const WebpackConfig = ({ finalConfig }) => (
   <Highlight language="javascript">
-    { JSON.stringify(finalConfig, null, 2) }
+    { finalConfig }
   </Highlight>
 )
-
-function escapeRegex(string) {
-  return string.replace(/[\[\](){}?*+\^$\\.|\-]/g, "\\$&");
-}
 
 WebpackConfig.propTypes = {}
 

@@ -10,16 +10,15 @@ const initialConfig = (state = initConfig, action) => {
 export default initialConfig
 
 export const getFinalConfig = (initialConfig, configByOption, selectedOptions) => {
-  // console.log(configByOption);
   let intermediateConfigs = {}
   selectedOptions.forEach(option => {
     Object.assign(intermediateConfigs, configByOption[option])
   })
   let finalConfig = { ...initialConfig, ...intermediateConfigs }
-  // console.log(JSON.stringify(finalConfig, null, 2));
-  return finalConfig
+  finalConfig = escapeRegex(JSON.stringify(finalConfig, null, 2))
+  return 'module.exports = ' + finalConfig
 }
 
 function escapeRegex(string) {
-  return string.replace(/[\[\](){}?*+\^$\\.|\-]/g, "\\$&");
+  return string.replace(/(\"\/)|(\/\")/g, "/");
 }

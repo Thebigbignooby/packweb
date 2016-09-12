@@ -31,8 +31,8 @@ export const initConfigByOption = {
     module: {
       loaders: [{
         loader: 'babel',
-        test: escapeRegExp(/\.js$/),
-        exclude: escapeRegExp(/node_modules/),
+        test: `/\.js$/`,
+        exclude: `/node_modules/`,
       }]
     }
   },
@@ -40,8 +40,8 @@ export const initConfigByOption = {
     module: {
       loaders: [{
         loader: 'babel',
-        test: '/\.js$/',
-        exclude: escapeRegExp(/node_modules/),
+        test: `/\.js$/`,
+        exclude: `/node_modules/`,
       }]
     }
   },
