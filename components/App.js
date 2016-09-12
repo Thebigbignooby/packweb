@@ -5,7 +5,7 @@ import TextField from 'material-ui/TextField';
 
 import ConfigBuilder from './ConfigBuilder'
 import ConnectedPackages from './ConnectedComponents/ConnectedPackages'
-import WebpackConfig from './WebpackConfig'
+import ConnectedWebpackConfig from './ConnectedComponents/ConnectedWebpackConfig'
 
 const App = () => (
   <div>
@@ -21,7 +21,7 @@ const App = () => (
     />
     <ConfigBuilder/>
     <ConnectedPackages/>
-    <WebpackConfig/>
+    <ConnectedWebpackConfig/>
   </div>
 )
 

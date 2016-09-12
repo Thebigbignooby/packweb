@@ -8,3 +8,11 @@ const configByOption = (state = initConfigByOption, action) => {
 }
 
 export default configByOption
+
+export const getConfigBySelectedOptions = (state, selectedOptions) => {
+  let config = {}
+  selectedOptions.forEach(option => {
+    config[state.option]
+  })
+  console.log(config);
+}

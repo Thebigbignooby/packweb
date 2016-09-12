@@ -1,5 +1,10 @@
+const webpack = require('webpack')
+
 module.exports = {
-  entry: './index.js',
+  entry: [
+    'webpack/hot/dev-server',
+    './index.js'
+  ],
   output: {
     path: './build',
     publicPath: 'build',
@@ -18,11 +23,19 @@ module.exports = {
         //   // ],
         //   // plugins: ['transform-object-rest-spread']
         // }
+      },
+      {
+        test:   /\.s?css/,
+        loaders: ['style', 'css', 'sass'],
       }
     ]
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+  ],
   devServer: {
     inline: true,
+    // hot: true,
     port: 3080,
   },
 }

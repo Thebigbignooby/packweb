@@ -3,7 +3,9 @@ import React, { PropTypes } from 'react'
 const Packages = ({ packages }) => (
   <div>
     <hr/>
-      npm install --save-dev webpack { packages.join(' ') }
+      <code>
+        npm install --save-dev webpack { packages.join(' ') }
+      </code>
     <hr/>
   </div>
 )
