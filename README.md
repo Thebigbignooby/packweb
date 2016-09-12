@@ -19,7 +19,6 @@ web-app to make a webpack config file easily
 
 3. Images
 - [ ] Image loaders ....
-- . . . .
 
 4. HTML
 
