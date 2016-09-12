@@ -1,7 +1,8 @@
 export const allPossibleOptions = [
-  'devServer',
+  // 'devServer',
   'es6',
   'react',
+  'sass'
 ]
 
 export const initConfig = {
@@ -13,9 +14,10 @@ export const initConfig = {
 }
 
 export const initPackagesByOption = {
-  devServer: ['webpack-dev-server'],
+  // devServer: ['webpack-dev-server'],
   es6: ['babel-core', 'babel-preset-es2015', 'babel-loader'],
-  react: ['babel-core', 'babel-preset-react', 'babel-loader']
+  react: ['babel-core', 'babel-preset-react', 'babel-loader'],
+  sass: ['css-loader', 'style-loader', 'sass-loader', 'node-sass']
 }
 
 // export const initImportsByPlugin = {
@@ -23,12 +25,12 @@ export const initPackagesByOption = {
 // }
 
 export const initConfigByOption = {
-  'devServer': {
-    devServer: {
-      inline: true,
-      hot: true
-    }
-  },
+  // 'devServer': {
+  //   devServer: {
+  //     inline: true,
+  //     hot: true
+  //   }
+  // },
   es6: {
     module: {
       loaders: [{
@@ -47,6 +49,15 @@ export const initConfigByOption = {
       }]
     }
   },
+  sass: {
+    module: {
+      loaders: [{
+        loaders: ['style', 'css', 'sass'],
+        test: `/\.(css|scss)$/`,
+        // exclude: `/node_modules/`,
+      }]
+    }
+  }
 }
 
 export const configOrder = [

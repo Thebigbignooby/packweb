@@ -17,6 +17,3 @@ export const getPackagesBySelectedOptions = (state) =>
 
 export const getFinalConfig = (state) =>
   fromInitialConfig.getFinalConfig(state.initialConfig, state.configByOption, state.selectedOptions)
-
-export const getConfigBySelectedOptions = (state) =>
-  fromConfigByOption.getConfigBySelectedOptions(state.configByOption, state.selectedOptions)
