@@ -1,5 +1,3 @@
-import escapeRegExp from 'lodash.escaperegexp'
-
 export const allPossibleOptions = [
   'devServer',
   'es6',
@@ -19,6 +17,10 @@ export const initPackagesByOption = {
   es6: ['babel-core', 'babel-preset-es2015', 'babel-loader'],
   react: ['babel-core', 'babel-preset-react', 'babel-loader']
 }
+
+// export const initImportsByPlugin = {
+//
+// }
 
 export const initConfigByOption = {
   'devServer': {

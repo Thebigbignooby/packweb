@@ -29,7 +29,6 @@
   "homepage": "https://github.com/Thebigbignooby/packweb#readme",
   "dependencies": {
     "highlight.js": "^9.6.0",
-    "lodash.escaperegexp": "^4.1.2",
     "material-ui": "^0.15.4",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
