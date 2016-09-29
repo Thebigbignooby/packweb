@@ -6,10 +6,10 @@ export const allPossibleOptions = [
 ]
 
 export const initConfig = {
-  entry: 'someEntry',
+  entry: 'index.js',
   output: {
-    path: 'somepath',
-    filename: 'somefilename'
+    path: 'dist',
+    filename: 'bundle.js'
   }
 }
 

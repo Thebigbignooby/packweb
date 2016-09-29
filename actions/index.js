@@ -1,6 +1,7 @@
-export const editString = (optionName) => ({
+export const editString = (optionName, stringToEdit) => ({
   type: 'EDIT_STRING',
-  optionName
+  optionName,
+  stringToEdit,
 })
 
 export const toggleOption = (optionName) => ({

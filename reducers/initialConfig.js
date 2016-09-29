@@ -2,6 +2,8 @@ import { initConfig } from '../knowledge-base/webpackConfigOptions.js'
 
 const initialConfig = (state = initConfig, action) => {
   switch (action.type) {
+    case 'EDIT_STRING':
+      console.log(state)
     default:
       return state
   }
